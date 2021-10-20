@@ -1,0 +1,6 @@
+Scope of a variable is the part of the program where the variable can be referred/used.
+
+ A variable defined inside a method is called local variable.
+ Its scope starts from its declaration and continues to the end of the block that contains the variable.
+ It must be declared and assigned a value before it can be used.
+ Parameters are also local variables, their scope is the whole method.
