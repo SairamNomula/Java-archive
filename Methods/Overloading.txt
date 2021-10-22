@@ -1,0 +1,20 @@
+If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+Return types don't play any roles in method overloading, it depends on  
+1. type of parameters 
+2. number of parameters
+In Java, Method Overloading is not possible by changing the return type of the method only.
+
+
+
+public static void main(Strinf[]args){
+    sayHi();
+    System.out.println( sayHi("Hello world!") );
+}
+
+public static void sayHi() {
+    System.out.println("Hi");
+}
+
+public static void sayHi(String name) {
+    return "Hi" + name;
+}
