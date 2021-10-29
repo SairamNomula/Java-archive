@@ -46,3 +46,62 @@ numbers[2] = 23.2;
 
 double[] numbers;
 numbers = {1.9,1.2,23.2}; --> // Error
+
+
+// -----------------------------------------------------------------------
+
+// Anonymous Arrays
+// An array without a variable referencing it
+
+new Scanner(System.in).nextDouble();
+new int[] {1,2,3,4};
+printArray(new int[] {1,2,3,4});
+
+// -----------------------------------------------------------------------
+
+// Exceeding Array Bounds
+// The indices must be between 0 and length -1
+
+char[] chars = {'a','b','c','d'};
+
+// Index -1 out of bonds for length 4
+System.out.println(chars[-1]);
+
+// Index 4 out of bounds for length 4
+System.out.println(chars[4]);
+
+System.out.println(chars); //abcd
+// -----------------------------------------------------------------------
+
+// Passing arrays to methods
+// Arrays are passed by reference
+
+public static void main(String[]args){
+    int[] numbers = {0,1};
+    change(numbers);
+    printArray(numbers); // 1 0
+}
+
+public static void change(int[]numbers){
+    numbers[0] = 1; // {1,1}
+    numbers[1] = 0; // {1,0}
+}
+
+public static void printArray(int[] numbers){
+    for(int i = 0; i < numbers.length; i++)
+    System.out.print(numbers[i] + " ");
+}
+
+// -----------------------------------------------------------------------
+
+// Returning arrays from methods
+
+public static int[] getNumbers(){
+    int[] numbers = {1,2,3,4,5};
+
+    return numbers;
+}
+
+public static int[] getNumbers(){
+    return new int[] {1,2,3,4,5};
+}
